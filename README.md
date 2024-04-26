@@ -29,3 +29,10 @@ Windows系统可用
 pyinstaller -i icon.ico -F WSDropSniPaste.py
 ```
 然后把res文件夹手动放过去
+
+------------
+
+#### 项目地址
+```bash
+git clone https://github.com/Hlight273/WarpearDropSSTools.git
+```
