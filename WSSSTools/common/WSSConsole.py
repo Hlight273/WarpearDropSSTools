@@ -1,7 +1,7 @@
 import common.WSScreenshot as WSScreenshot
 
 def __init():
-    print('战矛出货截图记录工具——v1.0')
+    print('战矛出货截图记录工具——v1.1')
     print('-请在出货界面按F3以截图，非出货界面则不会统计')
     print('-如果需要撤回上一次的拼贴，请在控制台输入revoke')
     print('-每日的出货，被分成不同的文件放在output文件夹中')
