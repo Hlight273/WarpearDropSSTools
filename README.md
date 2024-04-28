@@ -5,7 +5,7 @@ WarpearDropScreenshotTools，战矛掉落截图工具。
 
 Windows系统可用
 程序入口是WSDropSniPaste.py。
-如果没有python环境，也可以在release找到[打包后的版本](https://github.com/Hlight273/WarpearDropSSTools/releases/tag "发布 release")，解压到一个文件夹后点击exe运行
+如果没有python环境，也可以在release找到[打包后的版本](https://github.com/Hlight273/WarpearDropSSTools/releases "发布 release")，解压到一个文件夹后点击exe运行
 
 ------------
 
