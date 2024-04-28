@@ -92,6 +92,7 @@ def __crop_image(image):
 def merge():
     sLen = 88
     w,h = 4*sLen, sLen
+    #__printValidImg()
     imageList = list(__getValidImgDict().values())
     if len(imageList)==0:
         print('当前还没有符合条件的图片！')

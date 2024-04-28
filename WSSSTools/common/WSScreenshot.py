@@ -148,7 +148,7 @@ def ctrlv():
                 region = (0,0,w,h*(count-1))
                 image2 = image.crop(region)
                 image2.save(path)
-            print('已撤销今日上一次截图！')
+                print('已撤销今日上一次截图！')
         else:
             print('今日还没有截图！')
     except Exception as e :
