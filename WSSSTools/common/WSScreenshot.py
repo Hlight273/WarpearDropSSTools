@@ -3,13 +3,19 @@ import datetime
 import winsound
 import pyautogui
 import pygetwindow as gw
-import conf.settings as WSSpath
+
 import sys
 import traceback
 
-import common.ImgCorrelate as ImgCorrelate
-
 from PIL import Image,ImageDraw,ImageFont
+
+try:
+    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, parent_dir)
+    from conf import settings as WSSpath
+    import common.ImgCorrelate as ImgCorrelate
+except Exception as e:
+    1+1==2
 
 sLen = 88 #ws出货框宽=高
 
@@ -30,19 +36,25 @@ def __newSsFileName():
     return file_name
 
 #返回带文字的标题ui 的Imgae
-def __get_imgae_title(text):
+def get_imgae_title(text):
+    #字体信息
+    font = WSSpath.path_font_BookAntiqua_bold
+    font_size = 40
+    text_color = (255, 255, 0)  #黄色
+    #描边信息
+    outline_width = 2
+    outline_color = (0, 0, 0)
+    #背景图片
     titleImage = Image.open(WSSpath.path_img_title)
     draw = ImageDraw.Draw(titleImage)
-    font = ImageFont.truetype(WSSpath.path_font_BookAntiqua, 32)  # 选择字体和字号
+    font = ImageFont.truetype(font, font_size)  # 选择字体和字号
+    #居中
     box = font.getbbox(text)
     text_width, text_height = box[2]-box[0], box[3]-box[1]
     text_position = ((titleImage.width - text_width) // 2, (titleImage.height - text_height) // 2 - 5)  # 计算文本的位置使其居中
-     # 添加描边
-    stroke_width = 1
-    stroke_color = (0, 0, 0)  # 黑色描边
-    draw.text(text_position, text, font=font, fill=stroke_color, stroke_width=stroke_width, stroke_fill=stroke_color)
+    # 描边
+    draw.text(text_position, text, font=font, fill=outline_color, stroke_width=outline_width, stroke_fill=outline_color)
     # 绘制文本
-    text_color = (255, 255, 0)  # 黄色字体
     draw.text(text_position, text, font=font, fill=text_color)
     return titleImage
 
@@ -69,7 +81,7 @@ def __get_SS_Full(wsWin):
 def __ssJoint(cropped_ss):
     w,h = 4*sLen, sLen
     image_path = os.path.join(WSSpath.root_path(), "output", f"out_{datetime.date.today().strftime('%Y%m%d')}.png")
-    titleImage = __get_imgae_title(datetime.date.today().strftime("%Y.%m.%d"))
+    titleImage = get_imgae_title(datetime.date.today().strftime("%Y.%m.%d"))
     pImage, count = None, 0 #count切片数量
     if os.path.exists(image_path):
         pImage = Image.open(image_path)

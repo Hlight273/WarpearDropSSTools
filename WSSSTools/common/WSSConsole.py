@@ -1,4 +1,5 @@
 import common.WSScreenshot as WSScreenshot
+import common.WSSMergeAll as WSSMergeAll
 
 def __init():
     print('战矛出货截图记录工具——v1.1')
@@ -7,7 +8,7 @@ def __init():
     print('-每日的出货，被分成不同的文件放在output文件夹中')
 
 def __printHelp():
-    print("未知命令，现有命令：revoke —— 撤回上次拼贴")
+    print("未知命令，现有命令：revoke —— 撤回上次拼贴, merge —— 输出一张合并的大图片")
 
 def __run():
     while True:
@@ -34,6 +35,8 @@ def __readCommand(s):
         # else:
         #     # 执行不带参数的功能
         #     print("执行不带参数的功能")
+    elif command == "merge":
+        WSSMergeAll.merge()
     else:
         __printHelp()
 

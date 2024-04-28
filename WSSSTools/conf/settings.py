@@ -19,6 +19,7 @@ path_img_title = res_path('title.png')
 path_sound_ss = res_path('ss.wav')
 path_font_timesBold = res_path('Times New Roman Bold.ttf')
 path_font_BookAntiqua = res_path('Book Antiqua.ttf')
+path_font_BookAntiqua_bold = res_path('Book Antiqua Bold.ttf')
 
 #返回今日的截图path
 def path_sspasted_today():
