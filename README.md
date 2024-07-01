@@ -3,6 +3,10 @@ WarpearDropScreenshotTools，战矛掉落截图工具。
 
 这是一个为战矛在线WarspearOnline制作的一款掉落截图统计小工具
 
+效果演示
+![output文件夹](https://github.com/Hlight273/WarpearDropSSTools/assets/109777346/2b7006fa-6277-41e2-8cc1-49db7de7fb78)
+![合并后的图效果展示](https://github.com/Hlight273/WarpearDropSSTools/assets/109777346/a87d4acd-7118-4672-9a57-19b702d4e32b)
+
 Windows系统可用
 程序入口是WSDropSniPaste.py。
 如果没有python环境，也可以在release找到[打包后的版本](https://github.com/Hlight273/WarpearDropSSTools/releases "发布 release")，解压到一个文件夹后点击exe运行
@@ -38,11 +42,12 @@ Windows系统可用
 优化结构的时候还遇到了一些小问题，我程序的入口在WSSSTools下，但是ide打开的是更外面一层的目录。这时候以vscode为例需要配置工作目录(cwd)，然后再启动调试
 
 
+
 ------------
 
 #### v1.0.0
 
-由于春季掉落过于构式，本人决定统计一下掉落究竟是个什么情况，以便日后岁月史书..
+由于春季掉落令人感慨，决定统计一下掉落究竟是个什么情况，以便日后岁月史书..
 
 ###### 使用方法：
 
